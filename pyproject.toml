@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "deployplex"
-version = "0.0.0"
+version = "0.0.1"
 description = "DeployPlex Python SDK"
 authors = ["Alvaro Molina <am@deployplex.com>"]
 license = "Apache-2.0"

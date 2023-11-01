@@ -1,6 +1,6 @@
-# DeployPlex SDK for Python
+# DeployPlex Python SDK
 
-`deployplex` is the Command Line Interface (CLI) for DeployPlex.
+`deployplex` is the official DeployPlex SDK for Python
 
 [![pypi version](https://img.shields.io/pypi/v/deployplex.svg)](https://pypi.org/pypi/deployplex/)
 [![Downloads](https://static.pepy.tech/badge/deployplex/week)](https://pypi.org/pypi/deployplex/)

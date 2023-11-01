@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "deployplex"
+version = "0.0.0"
+description = "DeployPlex Python SDK"
+authors = ["Alvaro Molina <am@deployplex.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.104.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

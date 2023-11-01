@@ -18,4 +18,17 @@ def not_deprecated() -> Response:
     return Response()
 
 
-# TODO: Test somehow
+def test_deprecated():
+    response = client.get("/deprecated")
+    assert response.status_code == 200
+
+    instance = deployplex_fastapi_integration.FastAPIMiddleware(app)
+    assert "/deprecated" in instance.deprecated_endpoints
+
+
+def test_not_deprecated():
+    response = client.get("/not-deprecated")
+    assert response.status_code == 200
+
+    instance = deployplex_fastapi_integration.FastAPIMiddleware(app)
+    assert "/not-deprecated" not in instance.deprecated_endpoints

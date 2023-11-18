@@ -1,14 +1,19 @@
 [tool.poetry]
-name = "deployplex"
+name = "dosei"
 version = "0.0.10"
-description = "DeployPlex Python SDK"
-authors = ["Alvaro Molina <am@deployplex.com>"]
+description = "Dosei Python SDK"
+authors = ["Alvaro Molina <am@dosei.ai>"]
 license = "Apache-2.0"
 readme = "README.md"
+
+[tool.poetry.scripts]
+dosei = 'dosei.main:cli'
 
 [tool.poetry.dependencies]
 python = "^3.11"
 fastapi = "^0.104.1"
+pytest-trio = "^0.8.0"
+click = "^8.1.7"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -18,3 +23,9 @@ httpx = "^0.25.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = [
+  "--disable-pytest-warnings",
+  "-s"
+]

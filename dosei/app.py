@@ -43,23 +43,30 @@ class Dosei:
 
     @staticmethod
     def find_init(folder_path: str) -> str:
-        # Regular expression to find Dosei initialization
         pattern = re.compile(r'(\w+)\s*=\s*Dosei\(')
 
-        # Iterate over all files in the folder_path
+        # Convert folder_path to an absolute path
+        folder_path = os.path.abspath(folder_path)
+
         for root, dirs, files in os.walk(folder_path):
             for file in files:
                 if file.endswith(".py"):
-                    with open(os.path.join(root, file), 'r') as f:
+                    file_path = os.path.join(root, file)
+                    with open(file_path, 'r') as f:
                         content = f.read()
                         match = pattern.search(content)
                         if match:
-                            # Convert file path to module path
+                            # Calculate the relative path from folder_path
                             relative_path = os.path.relpath(root, folder_path)
+
+                            # Avoid parent directory references
+                            if relative_path.startswith(".."):
+                                continue
+
                             module_path = relative_path.replace(os.sep, '.')
-                            # Append file name without '.py' to module path
                             module_file = file[:-3]
-                            full_module_path = f"{module_path}.{module_file}" if module_path else module_file
+                            # Handle case where file is in the root of folder_path
+                            full_module_path = f"{module_path}.{module_file}" if module_path != '.' else module_file
                             return f"{full_module_path}:{match.group(1)}"
 
         raise FindDoseiInitError("No Dosei initialization found.")

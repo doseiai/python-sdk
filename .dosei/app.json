@@ -1,0 +1,14 @@
+{
+  "cron_jobs": [
+    {
+      "schedule": "* * * * *",
+      "entrypoint": "tests.test_app:cron_job",
+      "is_async": false
+    },
+    {
+      "schedule": "* * * * *",
+      "entrypoint": "tests.test_app:async_cron_job",
+      "is_async": true
+    }
+  ]
+}

@@ -1,36 +1,52 @@
 import asyncio
 import inspect
+import json
 import os
 import re
+from typing import List
+
+from croniter import croniter
+from pydantic import BaseModel, field_validator
 
 
 class FindDoseiInitError(Exception):
     pass
 
 
-class CronJob:
+class CronJob(BaseModel):
+    schedule: str
+    entrypoint: str
+    is_async: bool
 
-    def __init__(self, schedule: str, func):
-        self.schedule = schedule
-        self.entrypoint = f"{func.__module__}:{func.__name__}"
-        self.is_async = Dosei.is_func_async(func)
+    @field_validator("schedule")
+    @classmethod
+    def validate_schedule(cls, value):
+        if croniter.is_valid(value) is False:
+            raise ValueError("Invalid cron schedule format.")
+        return value
 
 
-class Dosei:
+class Dosei(BaseModel):
 
-    def __init__(self):
-        self.cron_jobs = []
+    _app_export_path: str = ".dosei/app.json"
+    cron_jobs: List[CronJob] = []
 
     def cron_job(self, schedule: str):
 
         def decorator(func):
-            self.cron_jobs.append(CronJob(schedule, func))
+            self.cron_jobs.append(CronJob(
+                schedule=schedule,
+                entrypoint=f"{func.__module__}:{func.__name__}",
+                is_async=Dosei.is_func_async(func)
+            ))
             return func
 
         return decorator
 
-    def deploy(self):
-        return self
+    def export(self):
+        os.makedirs(os.path.dirname(self._app_export_path), exist_ok=True)
+        with open(self._app_export_path, 'w') as f:
+            json.dump(self.model_dump(), f, indent=2)
 
     @staticmethod
     def is_func_async(func) -> bool:

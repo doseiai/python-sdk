@@ -2,9 +2,9 @@ import asyncio
 import inspect
 import json
 import os
-import re
 from typing import List
 
+from dosei_util import dosei_util
 from croniter import croniter
 from pydantic import BaseModel, field_validator
 
@@ -59,30 +59,4 @@ class Dosei(BaseModel):
 
     @staticmethod
     def find_init(folder_path: str) -> str:
-        pattern = re.compile(r'(\w+)\s*=\s*Dosei\(')
-
-        # Convert folder_path to an absolute path
-        folder_path = os.path.abspath(folder_path)
-
-        for root, dirs, files in os.walk(folder_path):
-            for file in files:
-                if file.endswith(".py"):
-                    file_path = os.path.join(root, file)
-                    with open(file_path, 'r') as f:
-                        content = f.read()
-                        match = pattern.search(content)
-                        if match:
-                            # Calculate the relative path from folder_path
-                            relative_path = os.path.relpath(root, folder_path)
-
-                            # Avoid parent directory references
-                            if relative_path.startswith(".."):
-                                continue
-
-                            module_path = relative_path.replace(os.sep, '.')
-                            module_file = file[:-3]
-                            # Handle case where file is in the root of folder_path
-                            full_module_path = f"{module_path}.{module_file}" if module_path != '.' else module_file
-                            return f"{full_module_path}:{match.group(1)}"
-
-        raise FindDoseiInitError("No Dosei initialization found.")
+        return dosei_util.find_framework_init("Dosei", folder_path)

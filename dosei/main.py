@@ -24,7 +24,7 @@ def run(func):
         app: Dosei = import_from_string("dosei_config:dosei")
     except ImportFromStringError:
         raise click.ClickException(f"Couldn't find a dosei_config.py file in \"{os.getcwd()}\"")
-    if app.dev is None:
+    if app.command is None:
         raise click.ClickException('Command "run" not found.')
     os.system(app.command)
 

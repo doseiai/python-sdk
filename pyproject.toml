@@ -11,12 +11,12 @@ dosei = 'dosei.main:cli'
 
 [tool.poetry.dependencies]
 python = "^3.11"
-fastapi = "^0.104.1"
+fastapi = "^0.109.2"
 pytest-trio = "^0.8.0"
 click = "^8.1.7"
 croniter = "^2.0.1"
-pydantic = "^2.5.1"
-dosei-util = "^0.0.1"
+pydantic = "^2.6.1"
+dosei-util = "^0.0.13"
 
 
 [tool.poetry.group.dev.dependencies]

@@ -24,7 +24,7 @@ def run(func):
     try:
         app: Dosei = import_from_string("dosei_config:dosei")
     except ImportFromStringError:
-        raise click.ClickException(f"Couldn't find a dosei.py file in \"{os.getcwd()}\"")
+        raise click.ClickException(f"Couldn't find a dosei_config.py file in \"{os.getcwd()}\"")
     if app.dev is None:
         raise click.ClickException('Command "run" not found.')
     subprocess.check_call(app.command)
@@ -35,7 +35,7 @@ def dev():
     try:
         app: Dosei = import_from_string("dosei_config:dosei")
     except ImportFromStringError:
-        raise click.ClickException(f"Couldn't find a dosei.py file in \"{os.getcwd()}\"")
+        raise click.ClickException(f"Couldn't find a dosei_config.py file in \"{os.getcwd()}\"")
     if app.dev is None:
         raise click.ClickException('Command "dev" not found.')
     subprocess.check_call(app.dev)

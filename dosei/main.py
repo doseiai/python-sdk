@@ -1,5 +1,4 @@
 import os
-import subprocess
 import sys
 
 import click
@@ -27,7 +26,7 @@ def run(func):
         raise click.ClickException(f"Couldn't find a dosei_config.py file in \"{os.getcwd()}\"")
     if app.dev is None:
         raise click.ClickException('Command "run" not found.')
-    subprocess.check_call(app.command)
+    os.system(app.command)
 
 
 @cli.command()
@@ -38,7 +37,7 @@ def dev():
         raise click.ClickException(f"Couldn't find a dosei_config.py file in \"{os.getcwd()}\"")
     if app.dev is None:
         raise click.ClickException('Command "dev" not found.')
-    subprocess.check_call(app.dev)
+    os.system(app.dev)
 
 
 @cli.command()

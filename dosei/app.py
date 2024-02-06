@@ -2,7 +2,7 @@ import asyncio
 import inspect
 import json
 import os
-from typing import List
+from typing import List, Optional
 
 from dosei_util import dosei_util
 from croniter import croniter
@@ -27,9 +27,13 @@ class CronJob(BaseModel):
 
 
 class Dosei(BaseModel):
-
     _app_export_path: str = ".dosei/app.json"
-    cron_jobs: List[CronJob] = []
+
+    name: Optional[str] = None
+    command: Optional[str] = None
+    dev: Optional[str] = None
+    port: Optional[int] = None
+    cron_jobs: Optional[List[CronJob]] = []
 
     def cron_job(self, schedule: str):
 

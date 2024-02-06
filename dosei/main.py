@@ -16,10 +16,7 @@ sys.path.insert(0, "")
 def cli():
     pass
 
-
-@cli.command()
-@click.argument("func", required=False)
-def run(func):
+def _run(func):
     if func:
         return Dosei.call_func(import_from_string(func))
     try:
@@ -30,6 +27,10 @@ def run(func):
         raise click.ClickException('Command "run" not found.')
     os.system(app.command)
 
+@cli.command()
+@click.argument("func", required=False)
+def run(func):
+    _run(func)
 
 @cli.command()
 def dev():

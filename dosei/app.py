@@ -31,6 +31,7 @@ class Dosei(BaseModel):
 
     name: Optional[str] = None
     command: Optional[str] = None
+    dev: Optional[str] = None
     port: Optional[int] = None
     cron_jobs: Optional[List[CronJob]] = []
 

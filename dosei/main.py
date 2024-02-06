@@ -22,7 +22,7 @@ def run(func):
     if func:
         return Dosei.call_func(import_from_string(func))
     try:
-        app: Dosei = import_from_string("dosei:dosei")
+        app: Dosei = import_from_string("dosei_config:dosei")
     except ImportFromStringError:
         raise click.ClickException(f"Couldn't find a dosei.py file in \"{os.getcwd()}\"")
     if app.dev is None:
@@ -33,7 +33,7 @@ def run(func):
 @cli.command()
 def dev():
     try:
-        app: Dosei = import_from_string("dosei:dosei")
+        app: Dosei = import_from_string("dosei_config:dosei")
     except ImportFromStringError:
         raise click.ClickException(f"Couldn't find a dosei.py file in \"{os.getcwd()}\"")
     if app.dev is None:

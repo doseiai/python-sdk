@@ -4,7 +4,6 @@ import json
 import os
 from typing import List, Optional
 
-from dosei_util import dosei_util
 from croniter import croniter
 from pydantic import BaseModel, field_validator
 
@@ -60,7 +59,3 @@ class Dosei(BaseModel):
     def call_func(func):
         is_async = Dosei.is_func_async(func)
         return asyncio.run(func()) if is_async else func()
-
-    @staticmethod
-    def find_init(folder_path: str) -> str:
-        return dosei_util.find_framework_init("Dosei", folder_path)

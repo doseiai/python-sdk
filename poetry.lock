@@ -126,20 +126,6 @@ files = [
 pycparser = "*"
 
 [[package]]
-name = "click"
-version = "8.1.7"
-description = "Composable command line interface toolkit"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "click-8.1.7-py3-none-any.whl", hash = "sha256:ae74fb96c20a0277a1d615f1e4d73c8414f5a98db8b799a7931d1582f3390c28"},
-    {file = "click-8.1.7.tar.gz", hash = "sha256:ca9853ad459e787e2192211578cc907e7594e294c7ccc834310722b41b9ca6de"},
-]
-
-[package.dependencies]
-colorama = {version = "*", markers = "platform_system == \"Windows\""}
-
-[[package]]
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
@@ -164,84 +150,6 @@ files = [
 [package.dependencies]
 python-dateutil = "*"
 pytz = ">2021.1"
-
-[[package]]
-name = "dosei-util"
-version = "0.0.13"
-description = ""
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "dosei_util-0.0.13-cp310-cp310-macosx_10_12_x86_64.whl", hash = "sha256:7bdacd1e1c501fb287069ec7be68268140486dbddaa11c0a74f2f3ac5f255475"},
-    {file = "dosei_util-0.0.13-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:5c911db30e6574dccb79aef73c8921aa07cfe9536d7f0303c93fad2803063331"},
-    {file = "dosei_util-0.0.13-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4c6a408a7fa6466ae25461ddd64bb02b99f747ae1e7d5f7eae8a64a9014979f9"},
-    {file = "dosei_util-0.0.13-cp310-cp310-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:b80fa90fc43a399c545dd25234b4a875ca67d77cb434b6810e2057d37e8c88ed"},
-    {file = "dosei_util-0.0.13-cp310-cp310-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:2bde1491df3ce7e8c5718f3711107f9a77a555dfe145e0394933176bed8378e4"},
-    {file = "dosei_util-0.0.13-cp310-cp310-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:c195676a571667c219147840867596167778dce6532c57923aa08b14044ea011"},
-    {file = "dosei_util-0.0.13-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b8de9467511793e9ce272340eee04fc9fbfeccfe01a67e2ca9a3214d92b42b1b"},
-    {file = "dosei_util-0.0.13-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:e16dc778cfc23ceb302bc00a4d2121855aa616217db0f6eba793f1c85de37b84"},
-    {file = "dosei_util-0.0.13-cp310-none-win32.whl", hash = "sha256:db628fba139336c236265427aba41bed0a287eacfc58264d9b004c1c94891658"},
-    {file = "dosei_util-0.0.13-cp310-none-win_amd64.whl", hash = "sha256:5c458a874ec4405afa3d2f16ffb3f19e074a498b41ac6abeb68d8273d5b74630"},
-    {file = "dosei_util-0.0.13-cp311-cp311-macosx_10_12_x86_64.whl", hash = "sha256:bc322b1e5383808c2ab73aec87a10fe83cf67371dec0c421043854a8d4bd9017"},
-    {file = "dosei_util-0.0.13-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:ab64dec878e2de450e2dbe2c647d6e0c4a7108407d0e569a321bd13fb007431b"},
-    {file = "dosei_util-0.0.13-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bb0e6543ffd7e16b499df2859090e2e49fc9698b5e38da4f1c3b9d5df3bdd1fd"},
-    {file = "dosei_util-0.0.13-cp311-cp311-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:ead64e02fb214b9ffd6261ff0a8d6adec999c62fb0e2ef7999123cca9a27f1d9"},
-    {file = "dosei_util-0.0.13-cp311-cp311-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:0336b1fd3720d125e6d48992772509f7a778630f75361dd6a13eeed5613f458a"},
-    {file = "dosei_util-0.0.13-cp311-cp311-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:e2c14db7184da9f009fae5964cefdb0c663898c0e7e5ad26adb9fdf766708056"},
-    {file = "dosei_util-0.0.13-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6dce230dd1c3c1ef431a46997bebc18948de5780cdfd2755e375125f85511878"},
-    {file = "dosei_util-0.0.13-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:8654af9c3eea2f7d44dfb2a5763bffaade8dc94b31bbc73ccf43a1f061a61fb1"},
-    {file = "dosei_util-0.0.13-cp311-none-win32.whl", hash = "sha256:1986340755266b4d6ff26ade75b9d8fdab3b28fc0492e978a40cc50e7ade3e71"},
-    {file = "dosei_util-0.0.13-cp311-none-win_amd64.whl", hash = "sha256:af099bd85e0e7857b56c89e0992a1b00a140af841ec14a3e475ffb6248495a94"},
-    {file = "dosei_util-0.0.13-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:b34ed3587dbf899d74df26c791e04817d475cf35c136050d625e2b45766ab028"},
-    {file = "dosei_util-0.0.13-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:5614c03ba81686504b16dd23bf1bb22e15111ea94b6aeb318371839afbbdc088"},
-    {file = "dosei_util-0.0.13-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:9390b475ffd0f56e1de2ff33790ce14cc455fbb1a1141abb790c05cea7164f69"},
-    {file = "dosei_util-0.0.13-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:ea5f7eb750d3e42c77aecc71066c243969e6ebaa732c4aebba6667a4a0d78739"},
-    {file = "dosei_util-0.0.13-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:0f31b4c038d2f1fff8c6c1c406614bd079305823a7d489941f0f81d983e351e9"},
-    {file = "dosei_util-0.0.13-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:a65a74d8c54bdf6521645683d680b9cc4583547743126b846f79f7e1d344d1c3"},
-    {file = "dosei_util-0.0.13-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:fae797f0d0710f4f1fea66c7d95af32bffc12e4196a01f854a6f154a76d0c9e4"},
-    {file = "dosei_util-0.0.13-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:ded794f3baa985ce0da631bd0615ed56a6af36418aac06eb277db4e8d3923ebc"},
-    {file = "dosei_util-0.0.13-cp312-none-win32.whl", hash = "sha256:5f2f42fb9726febab0daa0d4991029d42b711e704f4c2a4bebb66df7040da427"},
-    {file = "dosei_util-0.0.13-cp312-none-win_amd64.whl", hash = "sha256:e55b7c20c49e95b07f7b5ad77b3d10971317d065815d3be2fd2573b9a1e37999"},
-    {file = "dosei_util-0.0.13-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0bbc19b011d0c3da90fab80cdece6975dbb8133192ecd462a3b036c775cdba98"},
-    {file = "dosei_util-0.0.13-cp313-cp313-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:d7543a78a05ec98342040a595afe1184aff93663c3e936a0cbef94116caa4c4c"},
-    {file = "dosei_util-0.0.13-cp313-cp313-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:1e812a5fabaaabf23cf29992ef9711f483edb4fb96d8af889a4a942779610dfa"},
-    {file = "dosei_util-0.0.13-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:2f8d9b845d48b0a4e8d2ca9b17db76e8fb260225ec65971f873adbef349566b0"},
-    {file = "dosei_util-0.0.13-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5a49792d133e747e7d40ca11d28a4403e4475469791f9db3aefdf318d8fc0b39"},
-    {file = "dosei_util-0.0.13-cp38-cp38-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:b8c1cbbceabe4b34f3bc5bc7d775c94b689b8abbd40f5c985ce3bb8ee706ea6b"},
-    {file = "dosei_util-0.0.13-cp38-cp38-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:5a770c5ff7a645d3964024627412ecb16293036ce2c3ff68ddf4f905c570b781"},
-    {file = "dosei_util-0.0.13-cp38-cp38-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:126f1d6d8a4d772964b58844cf3eab2946b6f50abed01771ca4794123b3cb15b"},
-    {file = "dosei_util-0.0.13-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:066cc34d9c332432848790ce464bb1f6b347ebe693820721e19976d39a95d8ee"},
-    {file = "dosei_util-0.0.13-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:715dd316965036f7d43ac94d3de3754d267989c7cc9688e2121a3ff6cbb7df57"},
-    {file = "dosei_util-0.0.13-cp38-none-win32.whl", hash = "sha256:02dfa963c1a9afbe9d68f2eac97ff96c824642e07a5f909c00e25dec7ee0f115"},
-    {file = "dosei_util-0.0.13-cp38-none-win_amd64.whl", hash = "sha256:e84a22d26e39a75f1462d1cf742435565ccf36ee47a9300b31cb81ff971f36a5"},
-    {file = "dosei_util-0.0.13-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:530154251fc6c481580330b188ea5403cfce03803b28445fa578561b6e674aa6"},
-    {file = "dosei_util-0.0.13-cp39-cp39-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:ae986f9d7f709c2350a933c96e18eea5348bda3c0e0c6481a94f8da888498fd0"},
-    {file = "dosei_util-0.0.13-cp39-cp39-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:7c476c16768a5fdcf53ba490e2f4e95850c9f4712d8087fce481065a6e09381c"},
-    {file = "dosei_util-0.0.13-cp39-cp39-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:b96689d951634177671108862b521e84d1cfbffbd597809a8d13fcadfdbc48e7"},
-    {file = "dosei_util-0.0.13-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:7c06eaaaa758c43c92366cf353164754ecc5dd8cb3c21472b940d52b4d7898bb"},
-    {file = "dosei_util-0.0.13-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:b59ce12516eb99b742550106bc2b0d8b89ae4898adb9592b2109945d68182bc8"},
-    {file = "dosei_util-0.0.13-cp39-none-win32.whl", hash = "sha256:eb16c386eddff07e7fd345291617dd83dc01664546b508b3190a755d79a24b26"},
-    {file = "dosei_util-0.0.13-cp39-none-win_amd64.whl", hash = "sha256:ea61275c66aeea736efdc964644f6d999bd9ae8686c36726c25e2f5c89b9c298"},
-    {file = "dosei_util-0.0.13-pp310-pypy310_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:7edd461721b31ddc48a158e0a7e9c428f13043cd8a587913a59cfd8ab4f5b9f1"},
-    {file = "dosei_util-0.0.13-pp310-pypy310_pp73-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:d207b190b37558fbe99f3492c7befabd384219b082bf3ae3f7dda6289941d8c7"},
-    {file = "dosei_util-0.0.13-pp310-pypy310_pp73-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:02c2baceaed0031ff0d2254dd5db0d90d358c104538ed3df512ac4b4da69fde2"},
-    {file = "dosei_util-0.0.13-pp310-pypy310_pp73-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:9f6ab59cc843a5ddc1aab88f7284f6bd6e58317080c8516d27419a2a098d2ddb"},
-    {file = "dosei_util-0.0.13-pp310-pypy310_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:72e78c66bb6d93b9033fcc5562a2b034c9f656769dcb9a5b4557b54df7835312"},
-    {file = "dosei_util-0.0.13-pp310-pypy310_pp73-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:d654da6dd1e2ae74410385d19002ada3b5d2cc917b73f3637f2530984f1b1412"},
-    {file = "dosei_util-0.0.13-pp38-pypy38_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bd70d97a6c1d387b0ed362066bcd750379d6588815ed8cdb1aa4dedc9043be9b"},
-    {file = "dosei_util-0.0.13-pp38-pypy38_pp73-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:f87e2a2d658e4b8fb3e2714d5b644eeace5109c9948beee54850c5d8bf6b054e"},
-    {file = "dosei_util-0.0.13-pp38-pypy38_pp73-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:09078761250be94e31fda5b79cd054ab9c4c482fd5d0ac4f5d8a005265ceadff"},
-    {file = "dosei_util-0.0.13-pp38-pypy38_pp73-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:c660ee7dd36e034ff61fcd0c2f72dc19c8b2e3d51092b281b6dce5ed6b913951"},
-    {file = "dosei_util-0.0.13-pp38-pypy38_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d25622cfde1150fbc3586c48310bc8ba59f3fac648e29b9d5b598794c4def8d4"},
-    {file = "dosei_util-0.0.13-pp38-pypy38_pp73-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:a637ca0c8d55acd9723b7c01152dd9c1727c1b0b3175b0f9b287cb5ff9c0063b"},
-    {file = "dosei_util-0.0.13-pp39-pypy39_pp73-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8b6ae80caf5d65fcb792a51e7719c34ce2428ad7370a424446ac0e5792641bcc"},
-    {file = "dosei_util-0.0.13-pp39-pypy39_pp73-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:7d8c3ecb6c12986a2ee109d87629ecf5929febb88f34b581654bf489d6f77b89"},
-    {file = "dosei_util-0.0.13-pp39-pypy39_pp73-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:ab48d3508e2ac75c7ce77130ef73e1c41dd44b3b7687897d860acdfa421fb3ff"},
-    {file = "dosei_util-0.0.13-pp39-pypy39_pp73-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:95c54c16436018e8e3b69d42e8eac479434fb595218a6837c9215966adaf3da0"},
-    {file = "dosei_util-0.0.13-pp39-pypy39_pp73-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c1ff1f4894e73f052fb206d8fb8ab74d6c83a3f07f94b58433af0e4cb5c173bf"},
-    {file = "dosei_util-0.0.13-pp39-pypy39_pp73-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:2e37f97f2d59c5276eeb9371af4b57d93469ea36ddc6899d7ae0714011b05b7f"},
-    {file = "dosei_util-0.0.13.tar.gz", hash = "sha256:e985050f45650d20ae40a29284306c593a95586a4a3c75bb93738cd76526704b"},
-]
 
 [[package]]
 name = "fastapi"
@@ -645,4 +553,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "c1a06a9672d1b619c16374d89fafa57d2d95a8e45cb6d3efd07c8a67789b0d63"
+content-hash = "a7288bb287a14e633ffdb4878c66beb0f1be4d8d874528c959fa5fec38ce5e02"

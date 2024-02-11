@@ -1,7 +1,7 @@
-from dosei import Dosei
+from dosei_sdk import Dosei
 import pytest
 
-from dosei.importer import import_from_string
+from dosei_sdk.importer import import_from_string
 
 dosei = Dosei()
 

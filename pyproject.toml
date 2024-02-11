@@ -1,23 +1,20 @@
 [tool.poetry]
-name = "dosei"
-version = "0.0.18a9"
+name = "dosei-sdk"
+version = "0.0.18a10"
 description = "Dosei Python SDK"
 authors = ["Alvaro Molina <am@dosei.ai>"]
 license = "Apache-2.0"
 readme = "README.md"
 
-[tool.poetry.scripts]
-dosei = 'dosei.main:cli'
-
 [tool.poetry.dependencies]
 python = "^3.11"
-fastapi = "^0.109.2"
-pytest-trio = "^0.8.0"
 croniter = "^2.0.1"
 pydantic = "^2.6.1"
 
 
 [tool.poetry.group.dev.dependencies]
+pytest-trio = "^0.8.0"
+fastapi = "^0.109.2"
 pytest = "^7.4.3"
 httpx = "^0.25.0"
 

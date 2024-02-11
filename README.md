@@ -1,12 +1,11 @@
 # Dosei Python SDK
 
-`dosei` is the official Dosei SDK for Python
+`dosei-sdk` is the official Dosei SDK for Python
 
 [![pypi version](https://img.shields.io/pypi/v/dosei.svg)](https://pypi.org/pypi/dosei/)
-[![Downloads](https://static.pepy.tech/badge/dosei/week)](https://pypi.org/pypi/dosei/)
-[![License: MIT](https://img.shields.io/badge/license-Apache--2.0-yellow)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Twitter](https://img.shields.io/twitter/url/https/x.com/dosei_ai.svg?style=social&label=Follow%20%40dosei_ai)](https://x.com/dosei_ai)
-[![](https://dcbadge.vercel.app/api/server/BP5aUkhcAh?compact=true&style=flat)](https://discord.com/invite/BP5aUkhcAh)
+[![](https://img.shields.io/discord/1144175748559683615?logo=discord&logoColor=7289DA&label=Discord)](https://discord.com/invite/BP5aUkhcAh)
+[![X (formerly Twitter)](https://img.shields.io/twitter/follow/dosei_ai?style=flat&logo=x)](https://x.com/dosei_ai)
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-white)](https://www.apache.org/licenses/LICENSE-2.0)
 
 
 ## Getting Started
@@ -15,17 +14,20 @@
 - [Python 3.11.2](https://www.python.org/downloads/)
 
 ### Install
-You can install and configure `dosei` using this command:
+You can install and configure `dosei-sdk` using this command:
+
 ```bash
-pip install -U dosei
+pip install -U dosei-sdk
 ```
 
 ### Configure
 
 ```python
-from fastapi import FastAPI
-import dosei.integrations.fastapi as dosei_fastapi_integration
+from dosei_sdk import Dosei
 
-app = FastAPI()
-dosei_fastapi_integration.init(app)
+dosei = Dosei()
+
+@dosei.cron_job("* * * * *")
+def cron_job():
+    print("hello world!")
 ```

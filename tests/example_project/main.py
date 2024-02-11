@@ -1,4 +1,4 @@
-from dosei import Dosei
+from dosei_sdk import Dosei
 
 dosei = Dosei()
 

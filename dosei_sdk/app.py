@@ -29,8 +29,7 @@ class Dosei(BaseModel):
     _app_export_path: str = ".dosei/app.json"
 
     name: Optional[str] = None
-    command: Optional[str] = None
-    dev: Optional[str] = None
+    run: Optional[str] = None
     port: Optional[int] = None
     cron_jobs: Optional[List[CronJob]] = []
 

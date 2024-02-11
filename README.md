@@ -2,7 +2,7 @@
 
 `dosei-sdk` is the official Dosei SDK for Python
 
-[![pypi version](https://img.shields.io/pypi/v/dosei.svg)](https://pypi.org/pypi/dosei/)
+[![pypi version](https://img.shields.io/pypi/v/dosei-sdk.svg)](https://pypi.org/pypi/dosei-sdk/)
 [![](https://img.shields.io/discord/1144175748559683615?logo=discord&logoColor=7289DA&label=Discord)](https://discord.com/invite/BP5aUkhcAh)
 [![X (formerly Twitter)](https://img.shields.io/twitter/follow/dosei_ai?style=flat&logo=x)](https://x.com/dosei_ai)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-white)](https://www.apache.org/licenses/LICENSE-2.0)

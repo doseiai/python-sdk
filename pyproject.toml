@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dosei-sdk"
-version = "0.0.18a10"
+version = "0.0.18a11"
 description = "Dosei Python SDK"
 authors = ["Alvaro Molina <am@dosei.ai>"]
 license = "Apache-2.0"

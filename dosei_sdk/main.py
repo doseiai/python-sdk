@@ -10,7 +10,7 @@ dosei_init = "dosei:dosei"
 sys.path.insert(0, "")
 
 
-def run(func):
+def run(func=None):
     if func:
         return Dosei.call_func(import_from_string(func))
     try:

@@ -17,7 +17,7 @@ def run(func=None):
         app: Dosei = import_from_string(dosei_init)
     except ImportFromStringError:
         raise ImportFromStringError(f"Couldn't find a dosei.py file in \"{os.getcwd()}\"")
-    if app.command is None:
+    if app.run is None:
         raise ImportFromStringError('Command "run" not found.')
     os.system(app.run)
 
